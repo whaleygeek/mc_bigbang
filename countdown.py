@@ -33,7 +33,7 @@ while True:
 
     # Output Control
     if bang:
-        for v in range(5,0):
+        for v in range(5,0,-1):
             mc.postToChat(str(v))
             time.sleep(1)
             
