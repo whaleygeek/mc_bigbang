@@ -16,7 +16,7 @@ GPIO.setmode(GPIO.BCM) # use broadcom GPIO numbers
 GPIO.setup(BANG, GPIO.OUT)
 
 pos = mc.player.getTilePos()
-mc.setBlock(pos.x, pos.y, pos.z, block.GOLD_BLOCK.id)
+mc.setBlock(pos.x+1, pos.y, pos.z, block.GOLD_BLOCK.id)
 mc.postToChat("hit that gold block!")
 
 # Main loop
