@@ -25,7 +25,7 @@ while True:
 
     # Input Sensing
     bang = False
-    events = mc.pollBlockHits()
+    events = mc.events.pollBlockHits()
     for e in events:
         pos = e.pos
         b = mc.getBlock(pos.x, pos.y, pos.z)
