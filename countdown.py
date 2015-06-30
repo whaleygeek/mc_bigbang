@@ -38,8 +38,8 @@ while True:
             time.sleep(1)
             
         mc.postToChat("BANG!")
-        mc.setBlock(pos.x-10, pos.y-5, pos.z-10, pos.x+10, pos.y+10, pos.z+10, block.AIR.id)
         GPIO.output(BANG, True)
+        mc.setBlock(pos.x-10, pos.y-5, pos.z-10, pos.x+10, pos.y+10, pos.z+10, block.AIR.id)
         time.sleep(3)
         GPIO.output(BANG, False)
         
