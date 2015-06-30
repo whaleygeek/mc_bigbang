@@ -29,12 +29,12 @@ while True:
 
     # Sensing
     pos = mc.player.getTilePos()
-    b = mc.getBlock(pos.x, pos.y-1, pos.z) ##### UNDERNEATH PLAYER
+    b = mc.getBlock(pos.x, pos.y, pos.z)
     button = not GPIO.input(BUTTON)
 
     # LED on, if standing on magic block
     if b == block.STONE.id:
-        GPIO.output(LED, True) ####CORRECTED
+        GPIO.output(LED, False)
     else:
         GPIO.output(LED, False)
 
@@ -44,5 +44,5 @@ while True:
         ####bang.play()
         mc.player.setTilePos(pos.x, pos.y+20, pos.z) # send player up in sky!
         mc.setBlocks(pos.x-10, pos.y-1, pos.z-10, pos.x+10, pos.y+10, pos.z+10, block.AIR.id)
-        time.sleep(4) ####ADDED
+
 # END

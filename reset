@@ -1,0 +1,8 @@
+#! /bin/bash
+echo Resetting user directory, with introduced bugs
+pushd ~/mc_bigbang
+cp *.wav ..
+rm ../sensors.py
+rm ../mysensors.py
+cp mysensors.py ..
+popd
